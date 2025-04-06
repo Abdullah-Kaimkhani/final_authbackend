@@ -4,7 +4,12 @@
       {
         "src": "app.js",
         "use": "@vercel/node"
-      }
+      },
+        "functions": {
+    "app/api/**/*": {
+      "maxDuration": 5 // All functions can run for a maximum of 5 seconds
+    }
+  }
     ],
     "routes": [
       {
